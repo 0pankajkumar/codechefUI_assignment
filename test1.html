@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      /* Style the header */
+      .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        /*background-color: #333;*/
+      }
+
+      /* Style the topnav links */
+      .topnavLeft a {
+        float: left;
+        display: block;
+        /*color: #f2f2f2;*/
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .topnavLeft a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Style the topnav links */
+      .topnavRight button {
+        float: right;
+
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: white;
+      }
+
+      /* Change color on hover */
+      .topnavLeft button:hover {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Header</h1>
+    </div>
+
+    <div class="topnav">
+      <div class="topnavRight">
+        <button>Log-in</button>
+        <button>Register</button>
+      </div>
+
+      <div class="topnavLeft">
+        <a href="#">ccdsap@codechef.com</a>
+        <a href="#">+91 93200 60499</a>
+      </div>
+    </div>
+  </body>
+</html>
