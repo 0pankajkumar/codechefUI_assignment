@@ -4,6 +4,14 @@
     <title>CSS Website Layout</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/styles1.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       * {
         box-sizing: border-box;
@@ -11,6 +19,7 @@
 
       body {
         margin: 0;
+        font-family: "Ubuntu", sans-serif;
       }
 
       /* Style the header */
@@ -23,54 +32,111 @@
       /* Style the top navigation bar */
       .topnav {
         overflow: hidden;
+        font-size: 15px;
         /*background-color: #333;*/
       }
 
+      .topnavLeft {
+        padding-left: 5%;
+      }
       /* Style the topnav links */
       .topnavLeft a {
         float: left;
         display: block;
-        /*color: #f2f2f2;*/
+        color: black;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
       }
 
-      /* Change color on hover */
-      .topnavLeft a:hover {
-        background-color: #ddd;
-        color: black;
+      .topnavRight {
+        padding: 14px 16px;
+        padding-left: 20%;
       }
-
       /* Style the topnav links */
       .topnavRight button {
         float: right;
 
-        padding: 14px 16px;
         text-decoration: none;
         background-color: white;
       }
+      .topnavRight button:hover {
+        border: 1px solid #ff5912;
+      }
 
-      /* Change color on hover */
-      .topnavLeft button:hover {
+      /* All Navigation menu styling
+      Add a black background color to the top navigation https://www.w3schools.com/cssref/css3_pr_border-bottom-left-radius.asp*/
+      .navMenuBrand {
+        float: left;
+        padding-top: 2%;
+        padding-left: 5%;
+      }
+      .navMenu {
+        background-color: None;
+        overflow: hidden;
+        float: right;
+        padding-top: 2%;
+        padding-right: 5%;
+      }
+
+      /* Style the links inside the navigation bar */
+      .navMenu a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        /* border-bottom: 3px solid transparent;
+        border-radius: 25px; */
+      }
+      .navMenu a:after {
+        content: "";
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: red;
+        height: 20px;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .navMenu a:hover {
+        border-bottom: 3px solid #ff5912;
+      }
+
+      .navMenu a.active {
+        border-bottom: 3px solid #ff5912;
       }
     </style>
   </head>
   <body>
-    <div class="header">
-      <h1>Header</h1>
-    </div>
-
     <div class="topnav">
-      <div class="topnavRight">
-        <button>Log-in</button>
-        <button>Register</button>
+      <div class="topnavLeft">
+        <a href="mailto:ccdsap@codechef.com"
+          ><img src="static/MailIco.png" alt="Email" /> ccdsap@codechef.com</a
+        >
+        <a href="#"
+          ><img src="static/PhoneIco.png" alt="Email" /> +91 93200 60499</a
+        >
       </div>
 
-      <div class="topnavLeft">
-        <a href="#">ccdsap@codechef.com</a>
-        <a href="#">+91 93200 60499</a>
+      <div class="topnavRight" style="padding-right: 5vw">
+        <button class="button1">New User</button>
+        <button class="button1">Log-in</button>
       </div>
     </div>
+    <br />
+    <nav>
+      <img class="navMenuBrand" src="static/Brand.png" />
+      <div class="navMenu">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">About</a>
+        <a href="#contact">Levels</a>
+        <a href="#details">Details</a>
+        <a href="#help">Help</a>
+      </div>
+    </nav>
   </body>
 </html>

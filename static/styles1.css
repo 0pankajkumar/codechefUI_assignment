@@ -1,5 +1,13 @@
 .button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #4caf50;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border-radius: 2px;
+}
+
+button {
+  padding: 5px 16px;
 }
