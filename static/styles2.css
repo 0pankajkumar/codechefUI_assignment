@@ -71,19 +71,29 @@ button {
 
 .navMenu {
   background-color: None;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
 }
 
 .navMenu a {
   /* float: left;
   display: block; */
+  /* text-align: center; */
+  /* margin-right: auto; */
+  /* margin-right: auto; */
+  /* border-bottom: 3px solid transparent;
+  border-radius: 25px; */
   color: black;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 15px;
-  margin-right: auto;
-  /* border-bottom: 3px solid transparent;
-  border-radius: 25px; */
+  text-align: center;
+  /* align-self: center; */
+}
+
+.navMenu img {
+  align-self: center;
 }
 
 .navMenu a:hover {
@@ -136,6 +146,22 @@ button {
 @media screen and (max-width: 600px) {
   .datesOuter .footerMenu {
     flex-direction: column;
+    flex-wrap: wrap;
+    display: inline-block;
+  }
+
+  .navMenuResponsive {
+    flex-direction: column;
+  }
+
+  .navMenuResponsive img:hover,
+  .navMenuResponsive a:hover {
+    border-bottom: none;
+    color: #ff5912;
+  }
+
+  .navMenu a.active {
+    border-bottom: none;
   }
 }
 
