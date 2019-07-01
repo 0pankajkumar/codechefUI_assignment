@@ -1,9 +1,10 @@
 .flexbox {
   display: flex;
+  flex-flow: column;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 60%;
+  width: 70%;
   height: 300px;
   margin: auto;
 }

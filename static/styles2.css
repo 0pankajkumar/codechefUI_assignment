@@ -26,11 +26,18 @@ body {
   padding: 10px;
 }
 .grid-item {
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
+  justify-content: space-evenly;
+  grid-template-columns: minmax(
+    min-content,
+    max-content
+  ); /*minmax(0, 1fr) 300px;*/
+  grid-gap: 1rem;
+  grid-template-rows: minmax(min-content, max-content);
 }
 
 .button1 {
@@ -73,7 +80,7 @@ button {
   background-color: None;
   display: flex;
   flex-direction: row;
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 .navMenu a {
@@ -103,6 +110,12 @@ button {
 
 .navMenu a.active {
   border-bottom: 3px solid #ff5912;
+}
+
+p {
+  border: 1px solid red;
+  padding: 2em, 6em;
+  word-wrap: break-word;
 }
 
 .hero-image {
