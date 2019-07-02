@@ -26,11 +26,11 @@ body {
   padding: 10px;
 }
 .grid-item {
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  /*! border: 1px solid rgba(0, 0, 0, 0.8); */
   padding: 20px;
   font-size: 30px;
   text-align: center;
-  /* overflow: hidden; */
+  /*! overflow: hidden; */
   justify-content: space-evenly;
   grid-template-columns: minmax(
     min-content,
@@ -113,13 +113,16 @@ button {
 }
 
 p {
-  border: 1px solid red;
-  padding: 2em, 6em;
+  /*! border: 1px solid red; */
+  margin-right: 2em;
+  /*! margin-bottom: 2em; */
+  line-height: 1.5em;
   word-wrap: break-word;
+  white-space: wrap;
 }
 
 .hero-image {
-  width: 100%;
+  /* width: 100%; */
   background-position: right;
   background-repeat: no-repeat;
   margin: 1vw 10vw 1vw 10vw;
@@ -127,7 +130,7 @@ p {
 
 .hero-text {
   text-align: left;
-
+  padding-right: 20%;
   left: 50%;
   transform: translate(2vw, 2vw);
   color: #2f2f2f;
@@ -156,6 +159,28 @@ p {
   margin-left: auto;
 }
 
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+}
+.dot1{
+	background-color: #387FCB;
+   }
+.dot2{
+	background-color: #F7CE44;
+   }
+.dot3{
+	background-color: #E86A1C;
+   }
+ .dot4{
+	background-color: #E81C1C;
+   }
+ 
+
 @media screen and (max-width: 600px) {
   .datesOuter .footerMenu {
     flex-direction: column;
@@ -178,8 +203,19 @@ p {
   }
 }
 
+footer{
+  display: flex;
+  justify-content: space-between;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);  
+}
+
 @media screen and (max-width: 600px) {
   header {
     flex-direction: column;
+  }
+  p {
+    font-size: 18px;
+    margin-right: 0em;
   }
 }
