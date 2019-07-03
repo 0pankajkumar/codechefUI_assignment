@@ -80,7 +80,7 @@ button {
   background-color: None;
   display: flex;
   flex-direction: row;
-  /* margin-right: auto; */
+  /*! margin-right: auto; */
 }
 
 .navMenu a {
@@ -89,10 +89,9 @@ button {
   /* text-align: center; */
   /* margin-right: auto; */
   /* margin-right: auto; */
-  /* border-bottom: 3px solid transparent;
-  border-radius: 25px; */
+  /*! border-bottom: 3px solid transparent; */ border-radius: 25px;
   color: black;
-  padding: 14px 16px;
+  padding: 1em 1.25em;
   text-decoration: none;
   font-size: 15px;
   text-align: center;
@@ -104,13 +103,38 @@ button {
 }
 
 .navMenu a:hover {
-  border-bottom: 3px solid #ff5912;
   color: #ff5912;
 }
 
-.navMenu a.active {
+.navMenu a:hover:after {
+  /* width: 50%;
   border-bottom: 3px solid #ff5912;
+  color: #ff5912; */
+
+  width: 50%;
+  border-bottom: 3px solid #ff5912;
+  content: '';
+  display: block;
+  position: left;
+  top: 0;
+  width: 50%;
+  left: 25%;
 }
+
+.navMenu a:active {
+  color: #ff5912;
+  width: 50%;
+  border-bottom: 3px solid #ff5912;
+  content: '';
+  display: block;
+  position: left;
+  top: 0;
+  width: 50%;
+  left: 25%;
+}
+
+
+
 
 p {
   /*! border: 1px solid red; */
@@ -130,7 +154,7 @@ p {
 
 .hero-text {
   text-align: left;
-  padding-right: 20%;
+  padding-right: 20px;
   left: 50%;
   transform: translate(2vw, 2vw);
   color: #2f2f2f;
@@ -145,6 +169,10 @@ p {
 
 .datesOuter {
   display: flex;
+  justify-content: space-between;
+  font-size: 20px; 
+  padding-left:25%; 
+  padding-right: 25%;
 }
 
 .datesInner {
@@ -153,10 +181,12 @@ p {
 
 .datesLeftElement {
   margin-right: auto;
+  font-size: 0.9em;
 }
 
 .datesRightElement {
-  margin-left: auto;
+  /*! margin-left: auto; */
+  font-size: 0.9em;
 }
 
 .dot {
@@ -179,6 +209,17 @@ p {
  .dot4{
 	background-color: #E81C1C;
    }
+  
+  .chef-image{
+    width:160px; 
+    text-align:right; 
+    padding-left: 85%;
+  }
+
+  h3 {
+    font-size:40px; 
+    text-align: center;
+  }
  
 
 @media screen and (max-width: 600px) {
@@ -210,6 +251,20 @@ footer{
   transform: translateY(-50%);  
 }
 
+.footer-grid {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  /*! overflow: hidden; */
+  justify-content: space-evenly;
+  grid-template-columns: minmax(
+    min-content,
+    max-content
+  ); /*minmax(0, 1fr) 300px;*/
+  grid-gap: 1rem;
+  grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+}
+
 @media screen and (max-width: 600px) {
   header {
     flex-direction: column;
@@ -217,5 +272,28 @@ footer{
   p {
     font-size: 18px;
     margin-right: 0em;
+  }
+  .vrLine{
+    display: none;
+  }
+  .datesOuter{
+    font-size: 15px; 
+    padding-left:0%; 
+    padding-right: 0%;
+    flex-direction: column;
+  }
+  .chef-image{
+    padding-left: 55%;
+  }
+  .footer-grid {
+    grid-auto-rows: auto;
+  }
+  h3 {
+    font-size: 35px;
+    text-align: left;
+  }
+  .hero-image {
+    margin-left: 2vw;
+    padding-right: 0vw;
   }
 }
