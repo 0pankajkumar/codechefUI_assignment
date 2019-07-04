@@ -312,6 +312,7 @@ footer {
   }
 
   .footerMenuRight {
-    margin-left: none;
+    align-items: center;
+    justify-content: center;
   }
 }
