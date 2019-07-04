@@ -80,7 +80,7 @@ button {
   background-color: None;
   display: flex;
   flex-direction: row;
-  margin-right: auto;
+  /*! margin-right: auto; */
 }
 
 .navMenu a {
