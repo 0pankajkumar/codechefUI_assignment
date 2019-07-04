@@ -183,7 +183,7 @@ p {
 }
 
 .datesRightElement {
-  /*! margin-left: auto; */
+  margin-right: auto;
   font-size: 0.9em;
 }
 
