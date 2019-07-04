@@ -277,6 +277,9 @@ footer {
   .footerMenuRight {
     float: right;
   }
+  #topNavBarSpecialAlignment {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -323,5 +326,9 @@ footer {
   .footerMenuRight {
     align-items: center;
     justify-content: center;
+  }
+
+  #topNavBarSpecialAlignment {
+    display: block;
   }
 }
